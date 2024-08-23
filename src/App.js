@@ -14,7 +14,7 @@ function App() {
   // Function to fetch GIFs from the API
   const fetchGifs = async (tags = '', offset = 0) => {
     try {
-      const response = await axios.get('http://localhost:8000/api/list-gif', {
+      const response = await axios.get('https://backend-six-theta-85.vercel.app/api/list-gif', {
         params: {
           tags: tags,
           offset: offset,
