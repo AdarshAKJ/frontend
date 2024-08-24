@@ -10,7 +10,7 @@ function GifDetail() {
     // Function to fetch GIF details by ID
     const fetchGif = async () => {
         try {
-            const response = await axios.get(`https://backend-six-theta-85.vercel.app/api/gif/${id}`);
+            const response = await axios.get(`https://backend-murex-eight.vercel.app/api/gif/${id}`);
             setGif(response.data.gif);
         } catch (error) {
             console.error('Error fetching GIF details:', error);
