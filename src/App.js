@@ -4,8 +4,6 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import GifDetail from './GifDetail'; // Ensure the path is correct
 
-
-
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [gifs, setGifs] = useState([]);
@@ -14,12 +12,13 @@ function App() {
   // Function to fetch GIFs from the API
   const fetchGifs = async (tags = '', offset = 0) => {
     try {
-      const response = await axios.get('https://backend-murex-eight.vercel.app/api/list-gif', {
-        params: {
-          tags: tags,
-          offset: offset,
-        }
-      });
+      const response = await axios.get
+        ('https://backend-murex-eight.vercel.app/api/list-gif', {
+          params: {
+            tags: tags,
+            offset: offset,
+          }
+        });
       return response.data.gifs;
     } catch (error) {
       console.error('Error fetching GIFs:', error);
